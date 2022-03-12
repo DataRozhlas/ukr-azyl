@@ -9,9 +9,6 @@ d = pd.read_excel('https://www.mvcr.cz/soubor/strpeni-ukr-k-' + datetime.now().s
 def np_encoder(object):
     if isinstance(object, np.generic):
         return object.item()
-# %%
-# deti, dospeli, seniori
-d.dropna(subset=['kraj'], inplace=True)
 
 # %%
 vek = {
